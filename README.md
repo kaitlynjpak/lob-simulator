@@ -32,7 +32,7 @@ events=50000 limits=32999 markets=12401 cancels=4600 trades=37306 vol=942160 avg
 
 ## Build and Run
 ```bash
-git clone https://github.com/YOUR_USERNAME/lob-sim.git
+git clone https://github.com/kaitlyjpak/lob-sim.git
 cd lob-sim
 cmake -S . -B build
 cmake --build build -j
