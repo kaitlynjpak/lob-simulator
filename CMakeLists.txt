@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
-project(lob_sim CXX)
+project(lob_simulator CXX)
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(lob_sim
+add_executable(lob_simulator
   src/main.cpp 
   src/order_book.cpp 
   src/matching_engine.cpp 
