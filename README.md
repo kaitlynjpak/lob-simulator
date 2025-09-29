@@ -1,24 +1,28 @@
-# LOB Simulator (C++)
+# Limit Order Book Simulator
+A high-performance limit order book (LOB) simulator that models market microstructure dynamics.  
+Implements price–time priority, matching engine logic, and stochastic market event generation.
 
-Event-driven limit order book simulator with:
-- Matching engine (price-time priority)
-- Strategies (market maker, momentum, pairs)
-- Metrics (PnL, inventory, Sharpe, drawdown)
+## Features
+- **Core order book engine**  
+  - Price–time priority queues  
+  - FIFO order matching  
+  - Limit/market orders, cancels, partial fills
 
-## Build
+- **Market dynamics**  
+  - Event-driven simulation  
+  - Poisson arrivals for order flow  
+  - Configurable low/high-volatility regimes (Markov switching)  
+  - Price offsets drawn from geometric/Laplace distributions
+
+- **Metrics & analysis**  
+  - Trade volume, spreads, slippage  
+  - Limit order fill ratios (by distance from mid)  
+  - Customizable logging and snapshots
+
+## Build and Run
 ```bash
-mkdir -p build && cd build
-cmake ..
-cmake --build .
-```
-
-## To run default demo
-```bash
-./lob_sim
-```
-
-## To run event-driven simulator
-```bash
-./lob_sim --run-sim --events N --seed 42
-//replace N with some number
-```
+git clone https://github.com/YOUR_USERNAME/lob-sim.git
+cd lob-sim
+cmake -S . -B build
+cmake --build build -j
+./build/lob_sim
